@@ -148,6 +148,20 @@ body {
   font-display: swap;
   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_c5H3gnD-w.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v14/JTURjIg1_i6t8kCHKm45_ZpC3gnD-w.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Baloo Chettan 2';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Baloo Chettan 2 Regular'), local('BalooChettan2-Regular'), url(https://fonts.gstatic.com/s/baloochettan2/v1/vm8udRbmXEva26PK-NtuX4ynWEzv5_d_.ttf) format('truetype');
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -159,41 +173,201 @@ header {
 header .headerRight {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  justify-content: space-between;
+  width: 60%;
+}
+@media (max-width: 500px) {
+  header .headerRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 header nav {
   display: flex;
   justify-content: space-around;
   justify-self: flex-start;
-  background: lightgrey;
-  padding: 2%;
+  background: #f5f5f5;
+  padding: 4% 2%;
+}
+@media (max-width: 500px) {
+  header nav {
+    padding: 2% 1%;
+    background: rgba(245, 245, 245, 0.8);
+  }
 }
 header nav a {
+  font-family: "Baloo Chettan 2", cursive;
   color: #576bb3;
-  font-size: 2.4rem;
+  font-size: 3vw;
   text-decoration: none;
+  font-weight: 800;
 }
 header .title {
-  font-family: "Montserrat", sans-serif;
   width: 100%;
-  margin: 12% 0 auto;
-  padding: 2% 0;
+  margin: 9% 0 auto;
+  padding: 4% 0;
   line-height: 1.25;
-  background: lightgrey;
+  background: #f5f5f5;
   text-align: center;
 }
+@media (max-width: 500px) {
+  header .title {
+    background: rgba(245, 245, 245, 0.8);
+    padding: 1% 0;
+    margin: 7% auto;
+  }
+}
 header .title h1 {
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: #576bb3;
-  font-size: 5.5rem;
+  font-size: 6vw;
 }
 header .title h2 {
+  font-family: "Baloo Chettan 2", cursive;
   color: #576bb3;
-  font-size: 2.4rem;
+  font-size: 3.25vw;
 }
 header .headerImage {
   display: flex;
   justify-content: center;
   width: 40%;
   padding: 4%;
+}
+header .headerImage img {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  header .headerImage {
+    display: none;
+  }
+}
+.mainContent {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .mainContent {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.mainContent .leftPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  padding: 4% 2% 4% 4%;
+}
+@media (max-width: 500px) {
+  .mainContent .leftPage {
+    width: 100%;
+    background: #f5f5f5;
+    padding: 2% 10% 0;
+  }
+}
+.mainContent .leftPage .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainContent .leftPage .contact div {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .mainContent .leftPage .contact div {
+    padding-left: 30%;
+  }
+}
+.mainContent .leftPage .contact div i {
+  padding-top: 4%;
+}
+.mainContent .leftPage .contact div p {
+  padding: 3% 0 0 4%;
+}
+.mainContent .leftPage hr {
+  width: 27%;
+  height: 0.75vw;
+  background: #696969;
+  margin: 4% auto 4% 0;
+}
+@media (max-width: 500px) {
+  .mainContent .leftPage hr {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.mainContent .leftPage .education {
+  padding-bottom: 10%;
+}
+.mainContent .rightPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  padding: 4%;
+  background: #f5f5f5;
+}
+@media (max-width: 500px) {
+  .mainContent .rightPage {
+    width: 100%;
+    background: #f5f5f5;
+    padding: 2% 10% 0;
+  }
+}
+.mainContent .rightPage hr {
+  width: 17%;
+  height: 0.75vw;
+  background: #696969;
+  margin: 4% auto 4% 0;
+}
+@media (max-width: 500px) {
+  .mainContent .rightPage hr {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.mainContent section {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+  padding-bottom: 4%;
+  line-height: 1.5;
+}
+.mainContent section h3 {
+  font-size: 2.35vw;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.9vw;
+  color: #696969;
+}
+@media (max-width: 500px) {
+  .mainContent section h3 {
+    text-align: center;
+  }
+}
+.mainContent section h4 {
+  font-weight: 500;
+}
+.mainContent section h4 span {
+  font-weight: normal;
+}
+.mainContent section ul {
+  padding: 0 0 7% 3.5%;
+}
+@media (max-width: 500px) {
+  .mainContent section ul {
+    padding: 2% 0 0 3.5%;
+  }
+}
+.mainContent section ul li {
+  list-style-type: disc;
+}
+@media (max-width: 500px) {
+  .mainContent .education p {
+    text-align: center;
+  }
 }
